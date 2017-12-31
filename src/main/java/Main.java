@@ -45,8 +45,8 @@ public class Main {
         Gson gson = new Gson();
 
         try {
-            HttpResponse<String> response = Unirest.get("http://httpbin.org/get").asString();
-            System.out.println(response);
+            HttpResponse<String> response = Unirest.get("http://httpbin.org/get?x=1").asString();
+            System.out.println(response.getBody());
         } catch (UnirestException e) {
             e.printStackTrace();
         }
